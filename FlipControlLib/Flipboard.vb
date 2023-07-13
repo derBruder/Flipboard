@@ -1,6 +1,7 @@
 ﻿Imports System.ComponentModel
 Imports System.Drawing.Drawing2D
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView
+Imports Microsoft.VisualBasic.Devices
 
 Public Class FlipboardCTL
   Private aktChar As Byte
@@ -17,6 +18,10 @@ Public Class FlipboardCTL
   End Property
   Private Sub FlipboardCTL_Load(sender As Object, e As EventArgs) Handles MyBase.Load
     Me.BackColor = Color.Transparent
+    Dim Flaptime As Integer = CInt(Rnd() * 40) + 80
+    tmrBlaettern.Interval = Flaptime
+
+    'My.Computer.Audio.Play(My.Resources.Resource1.Flap, AudioPlayMode.Background)
   End Sub
 
 
@@ -59,29 +64,29 @@ Public Class FlipboardCTL
       'g.Clear(BGColor)
 
       Dim myFont As Font
-              Dim xSize As Single = 20
-              Dim AproxStep As Single = 10
-              Dim myFontMeasure As SizeF
-              Do
-                myFont = New Font("Arial Rounded MT", xSize, FontStyle.Bold)
-                AproxStep /= 2
-                myFontMeasure = g.MeasureString(sText, myFont)
-                If myFontMeasure.Width > Me.Width * 1.3 Or myFontMeasure.Height > Me.Height * 1.3 Then
-                  xSize = xSize / (AproxStep + 1)
-                Else
-                  If AproxStep < 1 Then Exit Do
-                  xSize = xSize * (AproxStep + 1)
-                End If
-              Loop
+      Dim xSize As Single = 20
+      Dim AproxStep As Single = 10
+      Dim myFontMeasure As SizeF
+      Do
+        myFont = New Font("Arial Rounded MT", xSize, FontStyle.Bold)
+        AproxStep /= 2
+        myFontMeasure = g.MeasureString(sText, myFont)
+        If myFontMeasure.Width > Me.Width * 1.3 Or myFontMeasure.Height > Me.Height * 1.3 Then
+          xSize = xSize / (AproxStep + 1)
+        Else
+          If AproxStep < 1 Then Exit Do
+          xSize = xSize * (AproxStep + 1)
+        End If
+      Loop
 
 
-              Dim myBrush = New SolidBrush(FontColor)
-              Dim mypoint = New Point((Me.Width - myFontMeasure.Width) / 2, (Me.Height - myFontMeasure.Height) / 2)
+      Dim myBrush = New SolidBrush(FontColor)
+      Dim mypoint = New Point((Me.Width - myFontMeasure.Width) / 2, (Me.Height - myFontMeasure.Height) / 2)
       g.DrawString(sText, myFont, myBrush, mypoint)
       g.DrawLine(penBorder, New Point(0, Me.Height / 2), New Point(Me.Width, Me.Height / 2))
 
       g.Dispose()
-              Me.BackgroundImage = BMP
+      Me.BackgroundImage = BMP
     Catch ex As Exception
 
     End Try
@@ -121,6 +126,10 @@ Public Class FlipboardCTL
     If _SollChar <> aktChar Then
       aktChar += 1
       If aktChar > 127 Then aktChar = 21
+      My.Computer.Audio.Play(My.Resources.Resource1.Flap, AudioPlayMode.Background)
+
+
+
       PaintMe()
     End If
   End Sub

@@ -31,11 +31,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\temp\\nc-wockel-net\\vb6\\Flipboard\\Flipboard\\FlipControlTest\\FlipControlTest.vbproj",
+      "projectUniqueName": "c:\\temp\\nc-wockel-net\\vb6\\Flipboard\\Flipboard\\FlipControlTest\\FlipControlTest.vbproj",
       "projectName": "FlipControlTest",
-      "projectPath": "C:\\temp\\nc-wockel-net\\vb6\\Flipboard\\Flipboard\\FlipControlTest\\FlipControlTest.vbproj",
+      "projectPath": "c:\\temp\\nc-wockel-net\\vb6\\Flipboard\\Flipboard\\FlipControlTest\\FlipControlTest.vbproj",
       "packagesPath": "C:\\Users\\danielw\\.nuget\\packages\\",
-      "outputPath": "C:\\temp\\nc-wockel-net\\vb6\\Flipboard\\Flipboard\\FlipControlTest\\obj\\",
+      "outputPath": "c:\\temp\\nc-wockel-net\\vb6\\Flipboard\\Flipboard\\FlipControlTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\danielw\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -52,8 +52,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\temp\\nc-wockel-net\\vb6\\Flipboard\\Flipboard\\FlipControlLib\\FlipControlLib.vbproj": {
-              "projectPath": "C:\\temp\\nc-wockel-net\\vb6\\Flipboard\\Flipboard\\FlipControlLib\\FlipControlLib.vbproj"
+            "c:\\temp\\nc-wockel-net\\vb6\\Flipboard\\Flipboard\\FlipControlLib\\FlipControlLib.vbproj": {
+              "projectPath": "c:\\temp\\nc-wockel-net\\vb6\\Flipboard\\Flipboard\\FlipControlLib\\FlipControlLib.vbproj"
             }
           }
         }
