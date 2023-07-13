@@ -9,3 +9,4 @@ c:\temp\nc-wockel-net\vb6\Flipboard\Flipboard\FlipControlLib\obj\Debug\FlipContr
 c:\temp\nc-wockel-net\vb6\Flipboard\Flipboard\FlipControlLib\obj\Debug\FlipControlLib.dll
 c:\temp\nc-wockel-net\vb6\Flipboard\Flipboard\FlipControlLib\obj\Debug\FlipControlLib.xml
 c:\temp\nc-wockel-net\vb6\Flipboard\Flipboard\FlipControlLib\obj\Debug\FlipControlLib.pdb
+c:\temp\nc-wockel-net\vb6\Flipboard\Flipboard\FlipControlLib\obj\Debug\FlipControlLib.FlipboardGroup.resources

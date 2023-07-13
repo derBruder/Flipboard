@@ -1,8 +1,8 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FlipboardCTL
+Partial Class FlipboardGroup
     Inherits System.Windows.Forms.UserControl
 
-    'UserControl1 überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
+    'UserControl überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
     <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
@@ -23,23 +23,23 @@ Partial Class FlipboardCTL
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.tmrBlaettern = New System.Windows.Forms.Timer(Me.components)
+        Me.tmrValChanged = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
-        'tmrBlaettern
+        'tmrValChanged
         '
-        Me.tmrBlaettern.Enabled = True
+        Me.tmrValChanged.Enabled = True
+        Me.tmrValChanged.Interval = 1000
         '
-        'FlipboardCTL
+        'FlipboardGroup
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Teal
-        Me.Name = "FlipboardCTL"
-        Me.Size = New System.Drawing.Size(121, 201)
+        Me.Name = "FlipboardGroup"
+        Me.Size = New System.Drawing.Size(458, 342)
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents tmrBlaettern As Timer
+    Friend WithEvents tmrValChanged As Timer
 End Class
