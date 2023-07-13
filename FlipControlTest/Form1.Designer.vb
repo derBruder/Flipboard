@@ -115,7 +115,7 @@ Partial Class Flipboardtest
     Me.FBG1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-    Me.FBG1.BackColor = System.Drawing.Color.Teal
+    Me.FBG1.BackColor = System.Drawing.Color.Transparent
     Me.FBG1.BGColor = System.Drawing.Color.Empty
     Me.FBG1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
     Me.FBG1.Location = New System.Drawing.Point(13, 12)

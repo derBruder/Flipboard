@@ -1,4 +1,6 @@
 ﻿Imports System.ComponentModel
+Imports System.Drawing.Drawing2D
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView
 
 Public Class FlipboardCTL
   Private aktChar As Byte
@@ -20,9 +22,22 @@ Public Class FlipboardCTL
 
 
   Private Sub FlipboardCTL_Resize(sender As Object, e As EventArgs) Handles Me.Resize
-    paintMe
+    PaintMe()
 
   End Sub
+  Private Function GetRoundedPath(rect As Rectangle, radius As Single) As GraphicsPath
+    Dim path As GraphicsPath = New GraphicsPath()
+    Dim curveSize As Single = radius * 2.0F
+    path.StartFigure()
+    path.AddArc(rect.X, rect.Y, curveSize, curveSize, 180, 90)
+    path.AddArc(rect.Right - curveSize, rect.Y, curveSize, curveSize, 270, 90)
+    path.AddArc(rect.Right - curveSize, rect.Bottom - curveSize, curveSize, curveSize, 0, 90)
+    path.AddArc(rect.X, rect.Bottom - curveSize, curveSize, curveSize, 90, 90)
+    path.CloseFigure()
+    Return path
+  End Function
+
+
   Sub PaintMe()
     Try
 
@@ -31,34 +46,42 @@ Public Class FlipboardCTL
 
       Dim BMP As New Bitmap(Me.Width, Me.Height)
       Dim g As Graphics = Graphics.FromImage(BMP)
-      g.Clear(BGColor)
+      Dim penBorder As Pen = New Pen(Color.Black, 4)
+      Dim Brush1 = New SolidBrush(BGColor)
+      g.Clear(Color.Transparent)
+
+      Using roundPath As GraphicsPath = GetRoundedPath(Me.ClientRectangle, 10)
+        g.SmoothingMode = SmoothingMode.AntiAlias
+        g.FillPath(Brush1, roundPath)
+        g.DrawPath(penBorder, roundPath)
+      End Using
+
+      'g.Clear(BGColor)
 
       Dim myFont As Font
-      Dim xSize As Single = 20
-      Dim AproxStep As Single = 10
-      Dim myFontMeasure As SizeF
-      Do
-        myFont = New Font("Arial Rounded MT", xSize, FontStyle.Bold)
-        AproxStep /= 2
-        myFontMeasure = g.MeasureString(sText, myFont)
-        If myFontMeasure.Width > Me.Width * 1.3 Or myFontMeasure.Height > Me.Height * 1.3 Then
-          xSize = xSize / (AproxStep + 1)
-        Else
-          If AproxStep < 1 Then Exit Do
-          xSize = xSize * (AproxStep + 1)
-        End If
+              Dim xSize As Single = 20
+              Dim AproxStep As Single = 10
+              Dim myFontMeasure As SizeF
+              Do
+                myFont = New Font("Arial Rounded MT", xSize, FontStyle.Bold)
+                AproxStep /= 2
+                myFontMeasure = g.MeasureString(sText, myFont)
+                If myFontMeasure.Width > Me.Width * 1.3 Or myFontMeasure.Height > Me.Height * 1.3 Then
+                  xSize = xSize / (AproxStep + 1)
+                Else
+                  If AproxStep < 1 Then Exit Do
+                  xSize = xSize * (AproxStep + 1)
+                End If
+              Loop
 
-      Loop
 
-
-      Dim myBrush = New SolidBrush(FontColor)
-      Dim mypoint = New Point((Me.Width - myFontMeasure.Width) / 2, (Me.Height - myFontMeasure.Height) / 2)
-
+              Dim myBrush = New SolidBrush(FontColor)
+              Dim mypoint = New Point((Me.Width - myFontMeasure.Width) / 2, (Me.Height - myFontMeasure.Height) / 2)
       g.DrawString(sText, myFont, myBrush, mypoint)
-
+      g.DrawLine(penBorder, New Point(0, Me.Height / 2), New Point(Me.Width, Me.Height / 2))
 
       g.Dispose()
-      Me.BackgroundImage = BMP
+              Me.BackgroundImage = BMP
     Catch ex As Exception
 
     End Try
@@ -81,6 +104,7 @@ Public Class FlipboardCTL
 
     ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
     SetStyle(ControlStyles.SupportsTransparentBackColor, True)
+    Me.DoubleBuffered = True
   End Sub
 
   Public Property FontColor() As Color
