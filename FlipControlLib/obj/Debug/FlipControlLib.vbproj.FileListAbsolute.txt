@@ -1,0 +1,11 @@
+c:\temp\nc-wockel-net\vb6\Flipboard\Flipboard\FlipControlLib\bin\Debug\FlipControlLib.dll
+c:\temp\nc-wockel-net\vb6\Flipboard\Flipboard\FlipControlLib\bin\Debug\FlipControlLib.pdb
+c:\temp\nc-wockel-net\vb6\Flipboard\Flipboard\FlipControlLib\bin\Debug\FlipControlLib.xml
+c:\temp\nc-wockel-net\vb6\Flipboard\Flipboard\FlipControlLib\obj\Debug\FlipControlLib.vbproj.AssemblyReference.cache
+c:\temp\nc-wockel-net\vb6\Flipboard\Flipboard\FlipControlLib\obj\Debug\FlipControlLib.Resources.resources
+c:\temp\nc-wockel-net\vb6\Flipboard\Flipboard\FlipControlLib\obj\Debug\FlipControlLib.FlipboardCTL.resources
+c:\temp\nc-wockel-net\vb6\Flipboard\Flipboard\FlipControlLib\obj\Debug\FlipControlLib.vbproj.GenerateResource.cache
+c:\temp\nc-wockel-net\vb6\Flipboard\Flipboard\FlipControlLib\obj\Debug\FlipControlLib.vbproj.CoreCompileInputs.cache
+c:\temp\nc-wockel-net\vb6\Flipboard\Flipboard\FlipControlLib\obj\Debug\FlipControlLib.dll
+c:\temp\nc-wockel-net\vb6\Flipboard\Flipboard\FlipControlLib\obj\Debug\FlipControlLib.xml
+c:\temp\nc-wockel-net\vb6\Flipboard\Flipboard\FlipControlLib\obj\Debug\FlipControlLib.pdb

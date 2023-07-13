@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "FlipControlTest/1.0.0": {
+        "dependencies": {
+          "FlipControlLib": "1.0.0"
+        },
+        "runtime": {
+          "FlipControlTest.dll": {}
+        }
+      },
+      "FlipControlLib/1.0.0": {
+        "runtime": {
+          "FlipControlLib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FlipControlTest/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FlipControlLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
