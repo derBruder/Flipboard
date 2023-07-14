@@ -84,6 +84,18 @@ Public Class FlipboardCTL
       Dim mypoint = New Point((Me.Width - myFontMeasure.Width) / 2, (Me.Height - myFontMeasure.Height) / 2)
       g.DrawString(sText, myFont, myBrush, mypoint)
       g.DrawLine(penBorder, New Point(0, Me.Height / 2), New Point(Me.Width, Me.Height / 2))
+      Dim y7 As Integer = Me.Height / 7
+      Dim x11 As Integer = Me.Width / 11
+      Dim recdraw As New Rectangle(0, y7 * 3, x11, y7)
+      Dim linGrBrush As LinearGradientBrush = New LinearGradientBrush(recdraw, BriPro(150, BGColor), BriPro(50, BGColor), LinearGradientMode.ForwardDiagonal)
+      g.FillRectangle(linGrBrush, recdraw)
+      g.DrawRectangle(penBorder, recdraw)
+
+      recdraw = New Rectangle(x11 * 10 - 2, y7 * 3, x11, y7)
+      linGrBrush = New LinearGradientBrush(recdraw, BriPro(150, BGColor), BriPro(50, BGColor), LinearGradientMode.ForwardDiagonal)
+      g.FillRectangle(linGrBrush, recdraw)
+      g.DrawRectangle(penBorder, recdraw)
+
 
       g.Dispose()
       Me.BackgroundImage = BMP
@@ -91,6 +103,26 @@ Public Class FlipboardCTL
 
     End Try
   End Sub
+  Private Function CheckCol(ByVal iVal As Integer) As Integer
+    Dim CheckVal As Integer = iVal
+    If CheckVal > 255 Then CheckVal = 255
+    If CheckVal < 0 Then CheckVal = 0
+    Return CheckVal
+  End Function
+  Private Function BriPro(iproz As Integer, OldColor As Color) As Color
+    Dim cnew As Color
+    Dim newVal As Integer
+    Dim _r, _g, _b As Integer
+
+    _r = CheckCol(OldColor.R / 100 * iproz)
+    _g = CheckCol(OldColor.G / 100 * iproz)
+    _b = CheckCol(OldColor.B / 100 * iproz)
+
+    Return Color.FromArgb(_r, _g, _b)
+
+
+  End Function
+
   Private _BGColor As Color
   Public Property BGColor() As Color
     Get

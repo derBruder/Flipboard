@@ -44,16 +44,17 @@ Partial Class Flipboardtest
     Me.Flip1.BackgroundImage = CType(resources.GetObject("Flip1.BackgroundImage"), System.Drawing.Image)
     Me.Flip1.BGColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
     Me.Flip1.FontColor = System.Drawing.Color.Cyan
-    Me.Flip1.Location = New System.Drawing.Point(92, 340)
+    Me.Flip1.Location = New System.Drawing.Point(13, 396)
     Me.Flip1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
     Me.Flip1.Name = "Flip1"
-    Me.Flip1.Size = New System.Drawing.Size(153, 187)
+    Me.Flip1.Size = New System.Drawing.Size(106, 187)
     Me.Flip1.SollChar = "A"
     Me.Flip1.TabIndex = 0
     '
     'Button1
     '
-    Me.Button1.Location = New System.Drawing.Point(92, 251)
+    Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+    Me.Button1.Location = New System.Drawing.Point(409, 546)
     Me.Button1.Name = "Button1"
     Me.Button1.Size = New System.Drawing.Size(153, 37)
     Me.Button1.TabIndex = 3
@@ -62,7 +63,8 @@ Partial Class Flipboardtest
     '
     'Button2
     '
-    Me.Button2.Location = New System.Drawing.Point(253, 251)
+    Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+    Me.Button2.Location = New System.Drawing.Point(570, 546)
     Me.Button2.Name = "Button2"
     Me.Button2.Size = New System.Drawing.Size(153, 37)
     Me.Button2.TabIndex = 4
@@ -71,7 +73,8 @@ Partial Class Flipboardtest
     '
     'Button3
     '
-    Me.Button3.Location = New System.Drawing.Point(412, 251)
+    Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+    Me.Button3.Location = New System.Drawing.Point(729, 546)
     Me.Button3.Name = "Button3"
     Me.Button3.Size = New System.Drawing.Size(153, 37)
     Me.Button3.TabIndex = 5
@@ -87,10 +90,10 @@ Partial Class Flipboardtest
     Me.Flip2.BackgroundImage = CType(resources.GetObject("Flip2.BackgroundImage"), System.Drawing.Image)
     Me.Flip2.BGColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
     Me.Flip2.FontColor = System.Drawing.Color.Cyan
-    Me.Flip2.Location = New System.Drawing.Point(253, 340)
+    Me.Flip2.Location = New System.Drawing.Point(126, 396)
     Me.Flip2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
     Me.Flip2.Name = "Flip2"
-    Me.Flip2.Size = New System.Drawing.Size(153, 187)
+    Me.Flip2.Size = New System.Drawing.Size(106, 187)
     Me.Flip2.SollChar = "B"
     Me.Flip2.TabIndex = 1
     '
@@ -103,10 +106,10 @@ Partial Class Flipboardtest
     Me.Flip3.BackgroundImage = CType(resources.GetObject("Flip3.BackgroundImage"), System.Drawing.Image)
     Me.Flip3.BGColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
     Me.Flip3.FontColor = System.Drawing.Color.Cyan
-    Me.Flip3.Location = New System.Drawing.Point(414, 340)
+    Me.Flip3.Location = New System.Drawing.Point(239, 396)
     Me.Flip3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
     Me.Flip3.Name = "Flip3"
-    Me.Flip3.Size = New System.Drawing.Size(153, 187)
+    Me.Flip3.Size = New System.Drawing.Size(106, 187)
     Me.Flip3.SollChar = "C"
     Me.Flip3.TabIndex = 2
     '
@@ -123,7 +126,7 @@ Partial Class Flipboardtest
     Me.FBG1.Name = "FBG1"
     Me.FBG1.NumberOfFlipsX = 5
     Me.FBG1.PartBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-    Me.FBG1.Size = New System.Drawing.Size(867, 208)
+    Me.FBG1.Size = New System.Drawing.Size(868, 279)
     Me.FBG1.TabIndex = 0
     Me.FBG1.TextColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
     '
@@ -131,7 +134,7 @@ Partial Class Flipboardtest
     '
     Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
     Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-    Me.ClientSize = New System.Drawing.Size(893, 595)
+    Me.ClientSize = New System.Drawing.Size(894, 595)
     Me.Controls.Add(Me.FBG1)
     Me.Controls.Add(Me.Button3)
     Me.Controls.Add(Me.Button2)
